@@ -10,3 +10,9 @@ export class Document {
         this.appSpace = appSpace;
     }
 }
+
+export interface ClientInterface {
+    id: number;
+    firstName: string;
+    lastName: string;
+}

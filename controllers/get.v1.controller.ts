@@ -1,7 +1,16 @@
 // test GET router functionality
-exports.test = (req: any, res: { json: (arg0: { response: string; }) => void; }): void => {
+import {clients} from "../clients";
+
+export const test = (req: any, res: { json: (arg0: { response: string; }) => void; }): void => {
     res.json({
         response: 'GET router is functional'
+    });
+};
+
+export const getAllClients = (req: any,
+                              res: { json: (arg0: { clients: import("../models/base.model").ClientInterface[]; }) => void; }): void => {
+    res.json({
+        clients: clients
     });
 };
 //const getDb = require('../db').getDb;

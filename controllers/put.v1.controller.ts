@@ -1,5 +1,5 @@
 // test PUT router functionality
-exports.test = (req: any, res: { json: (arg0: { response: string; }) => void; }): void => {
+export const test = (req: any, res: { json: (arg0: { response: string; }) => void; }): void => {
     res.json({
         response: 'PUT router is functional'
     });

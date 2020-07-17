@@ -2,6 +2,7 @@ const createError = require('http-errors');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const server = require('express');
 const apiRouter = require('./routers/api.router');
@@ -14,6 +15,7 @@ app.use(logger('common')); // Apache common log style
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use(cors());
 
 app.use('/api', apiRouter);
 

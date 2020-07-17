@@ -3,6 +3,7 @@ var createError = require('http-errors');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+var cors = require('cors');
 var server = require('express');
 var apiRouter = require('./routers/api.router');
 var app = server();
@@ -11,6 +12,7 @@ app.use(logger('common')); // Apache common log style
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use(cors());
 app.use('/api', apiRouter);
 // catch catch all and pass to error handler
 app.use(function (req, res, next) {

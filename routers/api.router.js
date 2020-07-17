@@ -15,6 +15,7 @@ router.get('/v1/test/router/patch', patchV1Controller.test);
 // db test
 router.post('/v1/test/db/post', postV1Controller.dbTest);
 // GET methods
+router.get('/v1/client', getV1Controller.getAllClients);
 //router.get('/v1/:nameSpace', getV1Controller.many);
 //router.get('/v1/:nameSpace/:title', getV1Controller.one);
 // POST methods

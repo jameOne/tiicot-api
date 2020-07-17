@@ -1,8 +1,16 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getAllClients = exports.test = void 0;
 // test GET router functionality
+var clients_1 = require("../clients");
 exports.test = function (req, res) {
     res.json({
         response: 'GET router is functional'
+    });
+};
+exports.getAllClients = function (req, res) {
+    res.json({
+        clients: clients_1.clients
     });
 };
 //const getDb = require('../db').getDb;

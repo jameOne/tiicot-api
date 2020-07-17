@@ -1,4 +1,4 @@
-FROM node:carbon
+FROM node:latest
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -12,7 +12,7 @@ COPY package*.json ./
 RUN npm install --only=production
 
 # Bundle app source
-COPY api-server .
+COPY . .
 
 EXPOSE 3000
 CMD [ "npm", "start" ]

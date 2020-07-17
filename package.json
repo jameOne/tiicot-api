@@ -5,7 +5,7 @@
   "description": "Basic express api server",
   "main": "app.js",
   "scripts": {
-    "start": "source start.sh",
+    "start": "node ./bin/www",
     "test": "mocha --recursive"
   },
   "author": "James Spears",
@@ -14,6 +14,7 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "~1.18.3",
     "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "^4.16.4",
     "http-errors": "~1.6.2",
