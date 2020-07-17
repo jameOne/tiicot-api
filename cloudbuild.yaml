@@ -2,7 +2,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: [
       'build',
-      '-t', 'gcr.io/weevre/github_jameone_tiicot-api/ui:$SHORT_SHA',
-      '-t', 'gcr.io/weevre/github_jameone_tiicot-api/ui:latest', '.']
+      '-t', 'gcr.io/weevre/github_jameone_tiicot-api/api:$SHORT_SHA',
+      '-t', 'gcr.io/weevre/github_jameone_tiicot-api/api:latest', '.']
     dir: './'
 images: ['gcr.io/weevre/github_jameone_tiicot-api/api']
